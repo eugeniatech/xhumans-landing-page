@@ -1,0 +1,97 @@
+// static/css/_hero-form.scss
+.site-main {
+    background: $gradient-bg;
+    padding-top: 80px; // allow space for fixed header
+    min-height: calc(100vh - 80px);
+  
+    .hero {
+      text-align: center;
+      color: #fff;
+      padding: 2rem 1rem;
+  
+      .hero-headline {
+        font-family: $font-heading;
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+      }
+  
+      .video-container {
+        position: relative;
+        padding-bottom: 56.25%; // 16:9 aspect ratio
+        padding-top: 25px;
+        height: 0;
+        margin-bottom: 2rem;
+        iframe {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+        }
+      }
+  
+      .cta-container {
+        max-width: 800px;
+        margin: 0 auto;
+
+        .form-headline {
+            font-family: $font-heading;
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+          }
+  
+        .notify-form {
+          margin-bottom: 2rem;
+  
+          .form-fields {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+  
+            input[type="text"],
+            input[type="email"] {
+              flex: 1;
+              padding: 0.75rem;
+              font-family: $font-body;
+              border: none;
+              border-radius: 4px;
+            }
+  
+            .cta-button {
+              background-color: $accent-color;
+              color: #fff;
+              border: none;
+              padding: 0.75rem 1.5rem;
+              font-family: $font-heading;
+              text-transform: uppercase;
+              cursor: pointer;
+              border-radius: 4px;
+              transition: background-color 0.3s ease;
+              &:hover {
+                background-color: darken($accent-color, 10%);
+              }
+            }
+          }
+  
+          /* Responsive: stack fields on mobile */
+          @media (max-width: $breakpoint-mobile) {
+            .form-fields {
+              flex-direction: column;
+            }
+          }
+        }
+  
+        .social-links {
+          a {
+            color: #fff;
+            margin: 0 0.5rem;
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+            &:hover {
+              color: $accent-color;
+            }
+          }
+        }
+      }
+    }
+  }

@@ -1,71 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Product Landing Page</title>
-  <!-- Link to the compiled CSS file -->
-  <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="images/favicon.png" type="image/png">
-  <!-- Link to the Font Awesome CDN -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ config.title }}</title>
+  <meta name="description" content="{{ config.description }}">
+  <!-- Include Font Awesome v6 from CDN -->
   <script src="https://use.fontawesome.com/releases/v6.7.1/js/all.js" crossorigin="anonymous"></script>
   <!-- Link to the Google Fonts CDN -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+
+  <!-- Link compiled CSS -->
+  <link rel="stylesheet" href="main.css">
 </head>
 <body>
-  <header>
-    <!-- Replace 'logo.png' with your actual logo image path -->
-    <img src="images/logo.png" alt="Logo" />
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container">
+      <a href="/" class="logo">
+        <img src="/assets/logo.png" alt="XHumans logo">
+      </a>
+    </div>
   </header>
 
-  <main>
-    <!-- Video Player -->
-    <!-- <video controls> -->
-      <!-- Replace 'video.mp4' with your actual video file -->
-      <!-- <source src="video.mp4" type="video/mp4" /> -->
-      <!-- Your browser does not support the video tag. -->
-    <!-- </video> -->
-    <!-- Figma Prototype -->
-    <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://embed.figma.com/proto/V1HDrCZLsDsbMqzZMMCBeu/FY25-XHumans-Product-Prototype?node-id=1-2&starting-point-node-id=1%3A2&embed-host=share" allowfullscreen></iframe>
-
-    <!-- Interest Registration Form -->
-    <section class="interest-form">
-      <h2>REGISTER YOUR INTEREST</h2>
-      <!-- Using Netlify Forms attributes for easy backend handling -->
-      <form name="interest" method="POST" data-netlify="true">
-        <!-- Optional hidden input to help with Netlify forms spam filtering -->
-        <input type="hidden" name="form-name" value="interest" />
-        
-        <!-- Full Name Field (Optional) -->
-        <!-- <label for="full-name">Full Name (Optional):</label> -->
-        <input type="text" id="full-name" name="full-name" placeholder="Your full name">
-
-        <!-- Email Field (Required) -->
-        <!-- <label for="email">Email:</label> -->
-        <input type="email" id="email" name="email" required placeholder="Your email address">
-
-        <button type="submit">SIGN UP</button>
-      </form>
-    </section>
-
-    <!-- Social Links -->
-    <section class="socials">
-      <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-        <i class="fab fa-twitter"></i>
-      </a>
-      <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-        <i class="fab fa-facebook"></i>
-      </a>
-      <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
-        <i class="fab fa-instagram"></i>
-      </a>
+  <!-- Main Content -->
+  <main class="site-main">
+    <section class="hero">
+      <h1 class="hero-headline">COMING SOON.</h1>
+      <!-- Embedded Video -->
+      <div class="video-container">
+        <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" src="https://embed.figma.com/proto/V1HDrCZLsDsbMqzZMMCBeu/FY25-XHumans-Product-Prototype?node-id=1-2&starting-point-node-id=1%3A2&embed-host=share" allowfullscreen></iframe>
+        <!-- <video controls preload="none" poster="/assets/video.mp4">
+          <source src="/assets/video.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video> -->
+      </div>
+      
+      <!-- Form and Social Links -->
+      <div class="cta-container">
+        <h2 class="form-headline">REGISTER YOUR INTEREST.</h2>
+        <form name="notify" method="POST" data-netlify="true" class="notify-form">
+          <!-- Include Netlify hidden field -->
+          <input type="hidden" name="form-name" value="notify">
+          <div class="form-fields">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <button type="submit" class="cta-button">Notify Me</button>
+          </div>
+        </form>
+        <div class="social-links">
+          <a href="https://twitter.com" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
     </section>
   </main>
 
-  <footer>
-    &copy; 2025 XHumans. All rights reserved.
+  <!-- Footer -->
+  <footer class="site-footer">
+    <p>© 2025 {{ config.title}}. All rights reserved.</p>
   </footer>
 </body>
 </html>

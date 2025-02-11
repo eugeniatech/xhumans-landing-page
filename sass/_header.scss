@@ -1,0 +1,21 @@
+// static/css/_header.scss
+.site-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: $footer-bg;
+  padding: 1rem 0;
+  z-index: 100;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+  }
+
+  .logo img {
+    height: 40px;
+  }
+}
