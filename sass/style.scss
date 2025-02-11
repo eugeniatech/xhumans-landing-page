@@ -1,0 +1,79 @@
+// Define color variables
+$bg-start: #000000;     // Starting color (black)
+$bg-end: #800080;       // Ending color (purple)
+
+// Define typeface variables
+$font-logo: 'Helvetica Neue', sans-serif;
+$font-content: 'Roboto', sans-serif;
+$font-footer: 'Courier New', monospace;
+
+// Ensure the HTML element takes up the full height
+html {
+  height: 100%;
+}
+
+// Global Styles
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;              // Use Flexbox layout
+  flex-direction: column;     // Stack header, main, footer vertically
+  min-height: 100vh;          // Ensure the full viewport height is used
+  background: linear-gradient($bg-start, $bg-end) no-repeat center center;
+  background-size: cover;     // Adapt the gradient to any screen size
+  color: #ffffff;
+  font-family: $font-content;
+}
+
+// Header Styles
+header {
+  text-align: center;
+  padding: 20px;
+  
+  img {
+    max-width: 200px;
+    height: auto;
+  }
+}
+
+// Main Content Styles
+main {
+  flex: 1;                    // Grow to fill the space between header and footer
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;    // Center the video vertically and horizontally
+  padding: 20px;
+  
+  video {
+    width: 80%;
+    max-width: 800px;
+    border: 3px solid #fff;
+    border-radius: 4px;
+  }
+  
+  .socials {
+    margin-top: 20px;
+    text-align: center;
+    
+    a {
+      font-family: $font-content;
+      color: #ffffff;
+      text-decoration: none;
+      margin: 0 10px;
+      font-size: 1.1em;
+      
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+// Footer Styles
+footer {
+  text-align: center;
+  padding: 15px;
+  font-family: $font-footer;
+  font-size: 0.9em;
+}
