@@ -1,0 +1,18 @@
+// static/css/main.scss
+
+// Import Variables
+@import 'variables';
+
+// Import modular components
+@import 'header';
+@import 'hero-form';
+@import 'footer';
+
+/* Global styles */
+body {
+  margin: 0;
+  font-family: $font-body;
+  background: $gradient-bg;
+  color: #fff;
+  line-height: 1.6;
+}
