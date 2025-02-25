@@ -1,67 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ config.title }}</title>
-  <meta name="description" content="{{ config.description }}">
-  <!-- Include Font Awesome v6 from CDN -->
-  <script src="https://use.fontawesome.com/releases/v6.7.1/js/all.js" crossorigin="anonymous"></script>
-  <!-- Link to the Google Fonts CDN -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{ config.title }}</title>
+    <meta name="description" content="{{ config.description }}" />
+    <!-- Include Font Awesome v6 from CDN -->
+    <script
+      src="https://use.fontawesome.com/releases/v6.7.1/js/all.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Link to the Google Fonts CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Oswald:wght@200..700&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Link compiled CSS -->
-  <link rel="stylesheet" href="main.css">
-</head>
-<body>
-  <!-- Header -->
-  <header class="site-header">
-    <div class="container">
-      <a href="/" class="logo">
-        <img src="/assets/logo.png" alt="XHumans logo">
-      </a>
-    </div>
-  </header>
+    <!-- Link compiled CSS -->
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="site-header">
+      <div class="container">
+        <a href="/" class="logo">
+          <img src="/assets/logo.png" alt="XHumans logo" />
+        </a>
+      </div>
+    </header>
 
-  <!-- Main Content -->
-  <main class="site-main">
-    <section class="hero">
-      <h1 class="hero-headline">COMING SOON.</h1>
-      <!-- Embedded Video -->
-      <div class="video-container">
-        <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" src="https://embed.figma.com/proto/V1HDrCZLsDsbMqzZMMCBeu/FY25-XHumans-Product-Prototype?node-id=1-2&starting-point-node-id=1%3A2&embed-host=share" allowfullscreen></iframe>
-        <!-- <video controls preload="none" poster="/assets/video.mp4">
+    <!-- Main Content -->
+    <main class="site-main">
+      <section class="hero">
+        <h1 class="hero-headline">COMING SOON.</h1>
+        <!-- Embedded Video -->
+        <div class="heygen-streaming-embed">
+          <div class="heygen-streaming-container">
+            <iframe
+              id="heygen-streaming-iframe"
+              title="Streaming Embed"
+              role="dialog"
+              allow="microphone"
+              allowfullscreen="false"
+            >
+            </iframe>
+            <!-- <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" src="https://embed.figma.com/proto/V1HDrCZLsDsbMqzZMMCBeu/FY25-XHumans-Product-Prototype?node-id=1-2&starting-point-node-id=1%3A2&embed-host=share" allowfullscreen></iframe> -->
+            <!-- <video controls preload="none" poster="/assets/video.mp4">
           <source src="/assets/video.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video> -->
-      </div>
-      
-      <!-- Form and Social Links -->
-      <div class="cta-container">
-        <h2 class="form-headline">REGISTER YOUR INTEREST.</h2>
-        <form name="notify" method="POST" data-netlify="true" class="notify-form">
-          <!-- Include Netlify hidden field -->
-          <input type="hidden" name="form-name" value="notify">
-          <div class="form-fields">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <button type="submit" class="cta-button">Notify Me</button>
           </div>
-        </form>
-        <div class="social-links">
-          <a href="https://twitter.com" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-          <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-          <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
         </div>
-      </div>
-    </section>
-  </main>
 
-  <!-- Footer -->
-  <footer class="site-footer">
-    <p>© 2025 Eugenia Inc. All rights reserved.</p>
-  </footer>
-</body>
+        <!-- Form and Social Links -->
+        <div class="cta-container">
+          <h2 class="form-headline">REGISTER YOUR INTEREST.</h2>
+          <form
+            name="notify"
+            method="POST"
+            data-netlify="true"
+            class="notify-form"
+          >
+            <!-- Include Netlify hidden field -->
+            <input type="hidden" name="form-name" value="notify" />
+            <div class="form-fields">
+              <input type="text" name="name" placeholder="Your Name" required />
+              <input
+                type="email"
+                name="email"
+                placeholder="Your Email"
+                required
+              />
+              <button type="submit" class="cta-button">Notify Me</button>
+            </div>
+          </form>
+          <div class="social-links">
+            <a href="https://twitter.com" target="_blank" aria-label="Twitter"
+              ><i class="fab fa-twitter"></i
+            ></a>
+            <a
+              href="https://instagram.com"
+              target="_blank"
+              aria-label="Instagram"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <p>© 2025 Eugenia Inc. All rights reserved.</p>
+    </footer>
+  </body>
+  <script src="js/script.js"></script>
 </html>
