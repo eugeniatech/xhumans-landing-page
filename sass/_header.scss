@@ -21,7 +21,14 @@
 }
 
 // static/css/_header.scss
-.site-pemex-header {
+.site-stprm-header {
+  .text-logo {
+    font-family: $font-heading;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #000;
+  }
+
   position: fixed;
   top: 0;
   width: 100%;
